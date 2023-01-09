@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Eurostile LT Std GEO_Mt';
+    src: url('EurostileLTStdGEO_MtBold.woff2') format('woff2'),
+        url('EurostileLTStdGEO_MtBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

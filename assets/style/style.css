@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+}
+@font-face {
+    font-family: 'Eurostile LT Std GEO_Mt';
+    src: url('../font/EurostileLTStdGEO_MtBold.woff2') format('woff2'),
+        url('../font/EurostileLTStdGEO_MtBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper__arr-btn{
+    position: relative;
+    bottom: 50px;
+}
+@media (max-width: 1024px){
+    .swiper__arr-btn {
+        bottom: 28px;
+        right: -30px;
+    }
+}
+.swiper__arr-btn .ar-l-btn,
+.swiper__arr-btn .ar-r-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: inherit;
+}
+
+.swiper__arr-btn .ar-r-btn.swiper-button-next {
+    background-image: url(../images/icons/left-arrow.png);
+    transform: rotate(180deg);
+}
+.swiper__arr-btn .ar-r-btn.swiper-button-next.swiper-button-disabled {
+    background-image: url(../images/icons/right-arrow.png);
+    transform: rotate(0deg);
+}
+.swiper__arr-btn .ar-l-btn.swiper-button-prev {
+    background-image: url(../images/icons/left-arrow.png);
+}
+.swiper__arr-btn .ar-l-btn.swiper-button-prev.swiper-button-disabled {
+    background-image: url(../images/icons/right-arrow.png);
+    transform: rotate(180deg);
+}
+
+.swiper__arr-btn .ar-l-btn{
+    right: 100px;
+    left: auto;
+}
+.swiper-button-prev,
+.swiper-button-next{
+    background-color: #fff;
+}
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 1!important;
+    cursor: auto;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.swiper__arr-btn .swiper-button-next:after,
+.swiper__arr-btn .swiper-button-prev:after {
+    font-family: Arial, Helvetica, sans-serif!important;
+    font-size: 0!important;
+    text-transform: none!important;
+    letter-spacing: 0;
+}
+
+
+nav.burger-menu.open{
+    top: 0;
+    left: 0;
+    padding: 3em 2em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    background-color:rgba(0,0,0,0.9);
+    animation: beigeAnim 5s;
+    animation-fill-mode: forwards;
+}
+nav.burger-menu.open a {
+    font-size: 20px;
+    color: #fff!important;
+}
+button.btn-menu.open div,
+button.btn-menu.open div::before ,
+button.btn-menu.open div::after{
+    background-color: #fff!important;
+}
+
+@keyframes beigeAnim {
+  0% {
+    transform: rotateX(-300px);
+  }
+  100% {
+    transform: rotateX(0);   
+  }
+}
+
+.tb-bg::-webkit-scrollbar {width: 10px;}
+
+.tb-bg::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+.tb-bg::-webkit-scrollbar-thumb {
+  background: #CB5366; 
+  border-radius: 10px;
+}
+
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index: 12;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal.open{
+    display: flex;
+}
+
+
+/* ................ */
+
